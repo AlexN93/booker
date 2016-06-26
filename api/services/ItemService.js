@@ -7,7 +7,7 @@ module.exports = {
   },
 
   getItem: function(id, next) {
-    Item.find({id: id}).exec(function(err, items) {
+    Item.find({id: id}).populate('availability').exec(function(err, items) {
       if(err) throw err;
       next(items);
     });

@@ -29,6 +29,11 @@ module.exports = {
       required: true
     },
 
+    date: {
+      type: 'date',
+      required: true
+    },
+
     chp: {
       type: 'json'
     }

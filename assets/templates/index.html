@@ -7,6 +7,7 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 text-center">
         <form name="orderForm" ng-submit="send()" ng-hide="!item" novalidate>
+
           <div class="row">
             <div class="form-group" ng-class="{'has-error' : submitted && orderForm.name.$invalid}">
               <div class="col-md-12 pb5">
@@ -56,6 +57,16 @@
                 <select id="chp" name="chp" class="form-control chp" ng-model="formData.chp"
                         data-ng-options="chp as chp.name for chp in chps track by chp.id">
                   <option value="">None</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12 pb5">
+                <select id="date" name="date" class="form-control dates" ng-model="formData.date"
+                        data-ng-options="date as date for date in dates track by date" data-toggle="tooltip" title="Available dates">
                 </select>
               </div>
             </div>

@@ -1,0 +1,73 @@
+<div class="container" ng-controller="BookerCtrl">
+  <div class="jumbotron">
+    <h1 align="center">Book your adventure</h1>
+    <br>
+    <h3>{{item[0].name}}</h3>
+    <h3>{{item[0].description}}</h3>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <form name="orderForm" ng-submit="send()" ng-hide="!item" novalidate>
+          <div class="row">
+            <div class="form-group" ng-class="{'has-error' : submitted && orderForm.name.$invalid}">
+              <div class="col-md-12 pb5">
+                <input type="text" name="name" id="name" class="form-control text-center" placeholder="Name"
+                       ng-model="formData.name" required>
+                <span ng-show="submitted && orderForm.name.$error.required" class="help-block mb0">This field is required</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group" ng-class="{'has-error' : submitted && orderForm.age.$invalid}">
+              <div class="col-md-12 pb5">
+                <input type="number" name="age" id="age" class="form-control text-center" placeholder="Age"
+                       ng-model="formData.age" required>
+                <span ng-show="submitted && orderForm.age.$error.required"
+                      class="help-block mb0">This field is required</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group" ng-class="{'has-error' : submitted && orderForm.gender.$invalid}">
+              <div class="col-md-12 pb5">
+                <select name="gender" id="gender" class="form-control gender" ng-model="formData.gender">
+                  <option value="1" selected>Male</option>
+                  <option value="2">Female</option>
+                  <option value="3">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group" ng-class="{'has-error' : submitted && orderForm.weight.$invalid}">
+              <div class="col-md-12 pb5">
+                <input type="number" name="weight" id="weight" class="form-control text-center" placeholder="Weight"
+                       ng-model="formData.weight" required>
+                <span ng-show="submitted && orderForm.weight.$error.required" class="help-block mb0">This field is required</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-12 pb5">
+                <select id="chp" name="chp" class="form-control chp" ng-model="formData.chp"
+                        data-ng-options="chp as chp.name for chp in chps track by chp.id">
+                  <option value="">None</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary btn-md pull-right">Order</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

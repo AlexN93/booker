@@ -4,7 +4,7 @@ var bookerApp = angular.module('bookerApp', ['ngRoute', 'ui.bootstrap']);
 
 bookerApp.config(['$routeProvider',
   function ($routeProvider) {
-    $routeProvider.when('/item/:itemId', {
+    $routeProvider.when('/items/:itemId', {
       templateUrl: '/templates/index.html',
       controller: 'BookerCtrl'
     }).when('/success', {

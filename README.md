@@ -1,5 +1,6 @@
 ## Booker App
 
+
 ##Tech Stack:
 + SailsJS
 + AngularJS
@@ -127,6 +128,7 @@ Body request :
 ##Getting started:
 You will need to set up a db connection, to do that you have to edit config/connection.js and config/models.js.<br>
 I've also included a booker.sql with sample data included in, cause there is not api to create items, just orders for them.<br>
+After you lift the app and you have some data in items you can go to :8080/#/items/itemId and book your travel.
 
 ```
 $ git clone https://github.com/AlexN93/booker.git

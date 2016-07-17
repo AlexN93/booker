@@ -132,7 +132,7 @@ After you lift the app and you have some data in items you can go to :8080/#/ite
 
 ```
 $ git clone https://github.com/AlexN93/booker.git
-$ npn install
+$ npm install
 $ bower install
 $ sails lift
 ```
